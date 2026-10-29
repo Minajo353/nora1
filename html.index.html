@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>لنورا ❤️</title>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{--g1:#ffd9e0;--g2:#ffb3c1;--g3:#ffe6ea;--g4:#ff9fb5;--card:rgba(255,255,255,.8);--ink:#4a2c33;--soft:#8a5a66;--ac:#d91e4a;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--g1:#2a0f1a;--g2:#4a1426;--g3:#1d1417;--g4:#5a1a2e;--card:rgba(42,29,33,.82);--ink:#f6e3e7;--soft:#d9a9b5;--ac:#ff5c80}}
+:root[data-theme="dark"]{--g1:#2a0f1a;--g2:#4a1426;--g3:#1d1417;--g4:#5a1a2e;--card:rgba(42,29,33,.82);--ink:#f6e3e7;--soft:#d9a9b5;--ac:#ff5c80}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;min-height:100vh;color:var(--ink);font-family:'Tajawal',Tahoma,sans-serif;line-height:1.9;background:linear-gradient(135deg,var(--g1),var(--g2),var(--g3),var(--g4));background-size:400% 400%;animation:bg 14s ease infinite}
+@keyframes bg{0%,100%{background-position:0 50%}50%{background-position:100% 50%}}
+#fx{position:fixed;inset:0;overflow:hidden;pointer-events:none;z-index:0}
+.fl{position:absolute;bottom:-50px;animation:up linear forwards}
+@keyframes up{to{transform:translateY(-115vh) rotate(25deg);opacity:0}}
+main{position:relative;z-index:1;max-width:520px;margin:0 auto;padding:24px 16px 40px}
+h1{text-align:center;font-size:30px;margin:6px 0;animation:pl 2s ease-in-out infinite}
+@keyframes pl{50%{transform:scale(1.07)}}
+.sub{text-align:center;color:var(--soft);margin:0 0 20px}
+.menu{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.tile{background:var(--card);border:0;color:var(--ink);font:inherit;border-radius:20px;padding:18px 8px;box-shadow:0 4px 16px rgba(217,30,74,.2);cursor:pointer;font-size:17px;backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);transition:transform .2s}
+.tile:active{transform:scale(.94)}
+.tile span{display:block;font-size:36px;animation:pl 2.4s ease-in-out infinite}
+.view{display:none}.view.on{display:block}
+.back{background:none;border:0;color:var(--ac);font:inherit;cursor:pointer;padding:4px 0;margin-bottom:8px}
+.box{background:var(--card);border-radius:18px;padding:16px;margin-top:12px;white-space:pre-line;min-height:60px;backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+.gar{position:relative;height:300px;border-radius:20px;background:var(--card);overflow:hidden}
+.ro{position:absolute;font-size:44px;background:none;border:0;cursor:pointer;transform-origin:50% 100%;animation:sw 3s ease-in-out infinite}
+@keyframes sw{50%{transform:rotate(9deg) scale(1.08)}}
+.game{position:relative;height:340px;border-radius:20px;background:var(--card);overflow:hidden;touch-action:manipulation}
+.h{position:absolute;top:-40px;font-size:34px;background:none;border:0;cursor:pointer;padding:0}
+.bar{text-align:center;color:var(--soft);margin:6px 0}
+.cap{text-align:center;background:var(--card);border-radius:20px;padding:26px 16px;white-space:pre-line;backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+.cap .big{font-size:58px;animation:pl 2s ease-in-out infinite}
+.chat{display:flex;flex-direction:column;gap:8px}
+.b{background:var(--ac);color:#fff;border-radius:16px 16px 4px 16px;padding:8px 14px;max-width:85%;align-self:flex-start;animation:pop .3s}
+@keyframes pop{from{transform:scale(.6);opacity:0}}
+.btn{display:block;margin:14px auto 0;background:var(--ac);color:#fff;border:0;border-radius:999px;font:inherit;padding:8px 26px;cursor:pointer}
+</style>
+</head>
+<body>
+<div id="fx"></div>
+<main>
+<h1>نورا ❤️</h1>
+<p class="sub">أربع حاجات صغيرة منّي ليكي</p>
+<div class="menu" id="menu">
+<button class="tile" data-v="v1"><span>🌹</span>ورود</button>
+<button class="tile" data-v="v2"><span>❤️</span>لعبة القلوب</button>
+<button class="tile" data-v="v3"><span>🔑</span>سر</button>
+<button class="tile" data-v="v4"><span>💬</span>شات</button>
+</div>
+
+<div class="view" id="v1"><button class="back">← رجوع</button>
+<div class="gar" id="gar"></div><div class="box" id="b1">اضغطي على أي وردة 🌹</div></div>
+
+<div class="view" id="v2"><button class="back">← رجوع</button>
+<div class="bar" id="sc">امسكي القلوب! كل 5 قلوب تفتح رسالة</div>
+<div class="game" id="gm"></div><div class="box" id="b2"></div></div>
+
+<div class="view" id="v3"><button class="back">← رجوع</button>
+<div class="cap" id="cap"><div class="big">🔑</div><div>اكتبي كلمة السر</div><input id="pw" inputmode="numeric" style="margin-top:14px;width:70%;padding:10px;text-align:center;font:inherit;font-size:18px;border-radius:12px;border:1px solid var(--soft);background:transparent;color:var(--ink)"><button class="btn" id="go">افتحي</button><div id="er" class="bar"></div></div></div>
+
+<div class="view" id="v4"><button class="back">← رجوع</button>
+<div class="chat" id="chat"></div><button class="btn" id="nx">التالي</button></div>
+</main>
+<script>
+var $=function(i){return document.getElementById(i)};
+var PASS="16092024";
+var ROSE=["لو بتقرأي دي يبقى أنا بعيد دلوقتي، بس بفكر فيكي.","وقفتك جنبي مش هتتنسي أبداً.","ضحكتك بتفرق في يومي أكتر مما تتخيلي.","شكراً إنك بتفهميني من غير ما أتكلم.","هرجعلك أحسن، وعد.","إنتي أجمل حاجة في حياتي."];
+var HRT=["نورا، إنتي أحسن حاجة حصلت لي. ❤️","كل يوم بشكر ربنا إنك في حياتي.","أنا فخور بيكي أكتر ما تتخيلي.","استنيني، وهنكمل كل حاجة حلوة مع بعض."];
+var CHAT=["ازيك يا نورا؟ ❤️","أنا كتبت لك الرسايل دي قبل ما أمشي.","عاوزك تعرفي إني مش خايف، لأني عارف إنك مستنياني.","وأنا هتعافى وأرجع بسرعة إن شاء الله.","لحد ما نتقابل، خدي بالك من نفسك.","بحبك أوي. ❤️"];
+
+// خلفية: قلوب وورد بتطلع
+var FX=["❤️","❤️","🌹","💕","✨"];
+setInterval(function(){var e=document.createElement("div");e.className="fl";e.textContent=FX[Math.floor(Math.random()*FX.length)];
+ e.style.left=Math.random()*95+"%";e.style.fontSize=(16+Math.random()*26)+"px";e.style.opacity=.35+Math.random()*.4;
+ var d=7+Math.random()*7;e.style.animationDuration=d+"s";$("fx").appendChild(e);setTimeout(function(){e.remove()},d*1000)},450);
+
+document.querySelectorAll(".tile").forEach(function(t){t.onclick=function(){show(t.dataset.v)}});
+document.querySelectorAll(".back").forEach(function(b){b.onclick=function(){show("menu")}});
+function show(id){["menu","v1","v2","v3","v4"].forEach(function(x){var e=$(x);if(x==="menu")e.style.display=id==="menu"?"grid":"none";else e.classList.toggle("on",x===id)});
+ stopGame();if(id==="v2")startGame();}
+
+// 1 ورود
+ROSE.forEach(function(m,i){var b=document.createElement("button");b.className="ro";b.textContent="🌹";
+ b.style.left=(6+(i%3)*32)+"%";b.style.top=(10+Math.floor(i/3)*45)+"%";b.style.animationDelay=(i*.35)+"s";
+ b.onclick=function(){$("b1").textContent=m;b.textContent="💐";b.onclick=function(){$("b1").textContent=m}};$("gar").appendChild(b)});
+
+// 2 لعبة
+var si,caught=0,got=0;
+function startGame(){var g=$("gm");
+ si=setInterval(function(){var h=document.createElement("button");h.className="h";h.textContent="❤️";
+  h.style.left=(Math.random()*85)+"%";var d=3+Math.random()*2.5;
+  h.style.transition="top "+d+"s linear";g.appendChild(h);
+  requestAnimationFrame(function(){requestAnimationFrame(function(){h.style.top="340px"})});
+  h.onclick=function(){h.remove();caught++;$("sc").textContent="قلوب: "+caught;
+   if(caught%5===0&&got<HRT.length){$("b2").textContent=HRT[got++]}
+   else if(caught%5===0){$("b2").textContent="خلصتي كل الرسايل ❤️ بحبك."}};
+  setTimeout(function(){h.remove()},d*1000+100)},700)}
+function stopGame(){clearInterval(si);$("gm").innerHTML=""}
+
+// 3 سر
+$("go").onclick=function(){var s=$("pw").value.trim(),p=s.split(/\D+/).filter(Boolean),k;
+ if(p.length===3)k=p[0].padStart(2,"0")+p[1].padStart(2,"0")+p[2];else k=s.replace(/\D/g,"");
+ if(k===PASS){var c=$("cap");c.innerHTML="";var a=document.createElement("div");a.className="big";a.textContent="💌";c.appendChild(a);
+  c.appendChild(document.createTextNode("كنت عارف إنك هتفتكريه ❤️\nمن اليوم ده وأنا بشكر ربنا إنك في حياتي.\nإنتي الأمان بالنسبة لي، ووقفتك جنبي عمري ما هنساها.\nبحبك يا نورا."))}
+ else $("er").textContent="مش دي 🙈"};
+
+// 4 شات
+var k=0;
+function nxt(){if(k>=CHAT.length){$("nx").style.display="none";return}
+ var b=document.createElement("div");b.className="b";b.textContent="...";$("chat").appendChild(b);
+ var i=k++;setTimeout(function(){b.textContent=CHAT[i]},700)}
+$("nx").onclick=nxt;nxt();
+show("menu");
+</script>
+</body>
+</html>
